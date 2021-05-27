@@ -32,7 +32,11 @@
         </div>
       </div>
     </div>
-    <div class="big_div image_div hidden" style="padding-bottom: 100px; display: flex; justify-content: center">
+    <div
+      id="animation_container"
+      class="big_div image_div hidden"
+      style="padding-bottom: 100px; display: flex; justify-content: center"
+    >
       <a href="https://evm.apefinance.org/" target="_blank" class="card education">
         <div class="overlay"></div>
         <div class="circle">
@@ -63,9 +67,6 @@
         </div>
         <p></p>
       </a>
-    </div>
-
-    <div class="big_div image_div hidden" style="padding-bottom: 100px; display: flex; justify-content: center">
       <a href="https://sol.apefinance.org/" target="_blank" class="card education">
         <div class="overlay"></div>
         <div class="circle">
@@ -80,9 +81,9 @@
             <title>Background</title>
             <defs>
               <image
+                id="img2"
                 width="100"
                 height="100"
-                id="img2"
                 href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAAXNSR0IB2cksfwAAAPxQTFRFAAAA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gA/4gApZ+XcgAAAFR0Uk5TAAVr4f/HdQqjqA/RhCb3QujwSswfjMRulJl7Ltm6oVdmOJxIeDMrEhoUAxeu3ubW2+BM463C9UWrv3CP+paKYesI/Ie4gFyekSS9aablhfIhR3opwvzPSQAAAp5JREFUeJztmmt70jAUx9N6aFknbB2ogBfKlNmJK8PBVOi2qnMX1Hn7/t/FpEkvCZXVxyYv9uT/pkl6kl+bnJLTUxDiZZj3oGrVRIZVOQKLZ9h1GYwNjuFsymDc5xgNGYymxTG2tiUw3B3VDDlu1WpzjAcyGA8dBa7LMbTrrpF610WPJCAE10XIlcDgXVfKnbgdkaGlpVVCjW7V6j1egTyp/IkH1xIhT6uHiPuVmp1XTZyiiqJkc1RFURGwYCeT4srPtCv/J0W78m1qChA5rixCkN33qtZgBaKlpXW7BtX/sOwKCBXpQUl5HI6hYgtWEbLclTzOcwkIcLn3IRWRigq30q5bnnFHXBchGfexEmS/qBxRkB60h1VrzxAZWlpaWlpaWqJe+kz7Qt2nm7Xt77/iOhipwchgdTs7RXff1CSut18fBEzj+LSV1oPDHuncCyZ7ecabWmpwNCWBiRUEG4yCi318cKapSTAbonYWEx2/JWZ8IEZ6dAGG+Rs/yBt0qAHUKQUXPXyY5k220TuA9+zrCo3IPIBDK85TzccA3VXIEEc9ZhyXDBY4xmKQ8MTJQVoApzR2OTvGb79NiD5wE44hJiuaf4O0+CI2COHjJ4ODJIERLqJNCE0WMKUQL+OVhZyeQ/MzB0nMSbHfTOcuuigLidgET1OI51xCeGXkIMknrojwrKNs5RslITklEHS9BPeLkUFywg0jNlt4Fb+WhHwzaQrzJgdB/jl8NzPInKU5Iy7t4dMeeOT5v68JGXm0jK+7YE0Q2mGTV8PLR0eO6rRlkj4GXhJN/1gDITNWDLFvspUfE1f/WfQwpjpZByEzVgjZypzrMp4Uo5P9bSJaEOwit8wjfL0uLNkA1xOY4cMvCC9ow+8ZACnOwE0guOUPBRKuVUsVtBwAAAAASUVORK5CYII="
               />
             </defs>
@@ -379,6 +380,10 @@ export default class Index extends Vue {}
   .image5 {
     width: 100%;
   }
+  #animation_container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .education {
   --bg-color: #ffd861;
@@ -419,6 +424,7 @@ export default class Index extends Vue {}
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 20px 30px;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;

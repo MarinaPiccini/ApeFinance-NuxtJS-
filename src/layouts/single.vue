@@ -20,6 +20,7 @@ export default class Single extends Vue {}
 
 <style lang="less">
 .all-background {
-  background: #27262c;
+  background-image: url('@/assets/background/background.jpg');
+  background-size: cover;
 }
 </style>

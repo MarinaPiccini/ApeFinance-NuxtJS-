@@ -29,14 +29,13 @@ const MenuItem = Menu.Item
 })
 export default class Nav extends Vue {
   navs = {
-    trading: true,
     swap: false,
     liquidity: false,
     pools: false,
     farms: false,
     fusion: false,
     staking: false,
-    acceleRaytor: false,
+    solpad: false,
     migrate: false
     // info: false
   }
@@ -56,7 +55,9 @@ export default class Nav extends Vue {
   set currentRoute(route) {}
 
   changeRoute({ key }: { key: string }): void {
-    if (!(this as any).navs[key]) {
+    if (key === 'solpad') {
+      this.$router.push({ path: `/acceleraytor/` })
+    } else if (!(this as any).navs[key]) {
       this.$router.push({ path: `/${key}/` })
     }
 

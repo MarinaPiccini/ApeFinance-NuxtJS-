@@ -100,7 +100,7 @@ const RadioButton = Radio.Button
 
 @Component({
   head: {
-    title: 'ApeFinance AcceleRaytor'
+    title: 'ApeFinance Solpad'
   },
 
   components: {

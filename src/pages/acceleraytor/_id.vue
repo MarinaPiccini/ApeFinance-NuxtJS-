@@ -324,7 +324,7 @@ const { TabPane } = Tabs
 
 @Component({
   head: {
-    title: 'ApeFinance AcceleRaytor'
+    title: 'ApeFinance Solpad'
   },
 
   components: {
